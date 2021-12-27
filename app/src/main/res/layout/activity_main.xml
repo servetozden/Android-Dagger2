@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/backgorund_main"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/logo_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/content_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
+
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WELCOME!"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/content_guideline"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        <EditText
+            android:id="@+id/edittextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please Enter Name:"
+            android:textColorHint="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+        <EditText
+            android:id="@+id/edittextSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please Enter Surname:"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/edittextName" />
+
+        <TextView
+            android:id="@+id/signupButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:background="#A0B58D"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittextSurname" />
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/textNameAndSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name and Surname"
+            android:textSize="20dp"
+            android:textColorHint="@color/white"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/signupButton"
+            android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
