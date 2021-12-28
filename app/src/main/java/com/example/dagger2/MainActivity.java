@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
            public void onClick(View view) {
                signupModel.setEdittextName(binding.edittextName.getText().toString().trim());
                signupModel.setEdittextSurname(binding.edittextSurname.getText().toString().trim());
+               
+               binding.textNameAndSurname.setText(signupModel.getEdittextName() + "" + signupModel.getEdittextSurname());
+
+
            }
        });
     }
